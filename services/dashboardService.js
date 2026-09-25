@@ -105,12 +105,12 @@ const getDashboardData = async (userId) => {
 
   const topSpendingCategory = topCategories.length > 0
     ? {
-        name: topCategories[0].categoryDoc.name,
-        amount: topCategories[0].totalSpent,
-        icon: topCategories[0].categoryDoc.icon,
-        color: topCategories[0].categoryDoc.color,
-        percentage: expenseThisMonth > 0 ? Math.round((topCategories[0].totalSpent / expenseThisMonth) * 100) : 0
-      }
+      name: topCategories[0].categoryDoc.name,
+      amount: topCategories[0].totalSpent,
+      icon: topCategories[0].categoryDoc.icon,
+      color: topCategories[0].categoryDoc.color,
+      percentage: expenseThisMonth > 0 ? Math.round((topCategories[0].totalSpent / expenseThisMonth) * 100) : 0
+    }
     : null;
 
   // 4. Budget vs Actual for current month
